@@ -39,15 +39,15 @@
 
 			// The "normal" size of the presentation, aspect ratio will be preserved
 			// when the presentation is scaled to fit different resolutions
-			width: 960,
-			height: 700,
+			width: 1200,
+			height: 720,
 
 			// Factor of the display size that should remain empty around the content
 			margin: 0.04,
 
 			// Bounds for smallest/largest possible scale to apply to content
 			minScale: 0.2,
-			maxScale: 2.0,
+			maxScale: 0.8,
 
 			// Display presentation control arrows
 			controls: true,
@@ -57,7 +57,7 @@
 			controlsTutorial: true,
 
 			// Determines where controls appear, "edges" or "bottom-right"
-			controlsLayout: 'bottom-right',
+			controlsLayout: 'bottom-left',
 
 			// Visibility rule for backwards navigation arrows; "faded", "hidden"
 			// or "visible"
@@ -67,7 +67,7 @@
 			progress: true,
 
 			// Display the page number of the current slide
-			slideNumber: false,
+			slideNumber: true,
 
 			// Use 1 based indexing for # links to match slide number (default is zero
 			// based)
@@ -93,7 +93,7 @@
 			disableLayout: false,
 
 			// Vertical centering of slides
-			center: true,
+			center: false,
 
 			// Enables touch navigation on devices with touch input
 			touch: true,
@@ -176,7 +176,7 @@
 			focusBodyOnPageVisibilityChange: true,
 
 			// Transition style
-			transition: 'slide', // none/fade/slide/convex/concave/zoom
+			transition: 'fade', // none/fade/slide/convex/concave/zoom
 
 			// Transition speed
 			transitionSpeed: 'default', // default/fast/slow
@@ -220,8 +220,17 @@
 			// The display mode that will be used to show slides
 			display: 'block',
 
+			math: {
+				mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+				config: 'TeX-AMS_SVG'
+			  },
+
 			// Script dependencies to load
-			dependencies: []
+			dependencies: [
+				{ src: '/plugin/math/math.js', async: true },
+				{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			]
 
 		},
 
