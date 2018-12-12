@@ -22,8 +22,9 @@ body {
 
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 30px;
+  font-size: 30pt;
   font-weight: normal;
+  line-height: 1.3;
   color: #222; }
 
 ::selection {
@@ -87,6 +88,7 @@ body {
 .reveal .slides:first-child section h1.title{
   padding-top: 2em;
   text-align: left ;
+  font-size: 50pt;
   color: #fff;
   font-family: 'Source Serif Pro', serif;
 }
@@ -95,15 +97,22 @@ body {
   color: #E46661;
   text-align: left ;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 46px;
   font-family: 'Source Serif Pro', serif;
 }
 
-.reveal .slides:first-child section p.author{
+.reveal .slides:first-child section p.author {
   color: #fff;
   font-weight: 500;
+  font-size: 24pt;
   text-align: left;
   margin-top: 5em;
+}
+
+.reveal .slides:first-child section p.date {
+  font-size: 20pt;
+  font-style: italic;
+  margin: 0px;
 }
 
 /*********************************************
@@ -162,7 +171,7 @@ body {
 
 .reveal blockquote {
   display: block;
-  position: relative;
+  position: center;
   width: 80%;
   margin: 0 40px 10px 10px;
   padding: 0 0 0 15px;
