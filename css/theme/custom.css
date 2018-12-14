@@ -171,16 +171,17 @@ body {
 
 .reveal blockquote {
   display: block;
-  position: center;
-  width: 80%;
-  margin: 0 40px 10px 10px;
-  padding: 0 0 0 15px;
+  position: relative;
+  width: 75%;
+  margin: 50px 0 50px 50px;
+  padding: 0 0 0 0px;
   font-family: 'Source Serif Pro', serif;
   font-style: italic;
-  font-size: inherit;
-  text-align: left;
+  font-size: 34pt;
+  text-align: center;
   border-left: 4px solid #E47C78;
-  color: #444!60; }
+  color: #444;
+}
 
 .reveal blockquote p:first-child,
 .reveal blockquote p:last-child {
@@ -278,7 +279,7 @@ body {
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px;
+  margin: 0px 0px;
   background: #424242;
   border: 1px solid #424242;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
