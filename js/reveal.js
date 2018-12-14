@@ -225,13 +225,33 @@
 				config: 'TeX-AMS_SVG'
 			  },
 
+			
+		tableofcontents: {
+			// Specifies the slide title of the table of contents slide
+			title: "Outline",
+	
+			// Specifies the position of the table of contents slide in the presentation
+			position: 2,
+	
+			// Specifies which slide tag elements will be used
+			// for generating the table of contents.
+			titleTagSelector: "h1, h2",
+	
+			// Specifies if the first slide, mostly the title slide of the presentation, should be ignored.
+			ignoreFirstSlide: true,
+	
+			// Specifies if every single element of the table of contents
+			// will be stepped through before moving on to the next slide.
+			fadeInElements: false
+		},
+
 			// Script dependencies to load
 			dependencies: [
+				{ src: 'plugin/tableofcontents/tableofcontents.js' },
 				{ src: '/plugin/math/math.js', async: true },
 				{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
 				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 			]
-
 		},
 
 		// Flags if Reveal.initialize() has been called
