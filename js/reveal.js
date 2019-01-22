@@ -238,7 +238,7 @@
 			titleTagSelector: "h1, h2",
 	
 			// Specifies if the first slide, mostly the title slide of the presentation, should be ignored.
-			ignoreFirstSlide: true,
+			ignoreFirstSlide: false,
 	
 			// Specifies if every single element of the table of contents
 			// will be stepped through before moving on to the next slide.
@@ -247,7 +247,7 @@
 
 			// Script dependencies to load
 			dependencies: [
-				{ src: 'plugin/tableofcontents/tableofcontents.js' },
+				{ src: 'plugin/tableofcontents/tableofcontents.js'},
 				{ src: '/plugin/math/math.js', async: true },
 				{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
 				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
